@@ -14,7 +14,7 @@ public class SchoolTimeUtil {
      * 学期开始时间 1598803200000L 2020年8月31
      * 1598198400000L 2020年8月24 星期一 测试使用
      */
-    public static final Date startTime = new Date(1598198400000L);
+    public static final Date startTime = new Date(1598803200000L);
 
 
     /**
