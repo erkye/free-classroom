@@ -9,7 +9,9 @@ import './style/gobal.css'
 Vue.config.productionTip = false
 Vue.prototype.$message = Message
 
-axios.defaults.baseURL = 'http://192.168.43.231:3000'
+// 'http://192.168.43.231:3000'
+
+axios.defaults.baseURL = ''
 /* 统一相应处理 */
 axios.interceptors.response.use(response => {
 // 正常的时候返回数据中 data
