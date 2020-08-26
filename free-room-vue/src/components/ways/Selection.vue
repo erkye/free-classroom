@@ -1,11 +1,11 @@
 <template>
-    <div class="box" :style="{'background-color': Color}">
+    <div class="box" :style="{'background-color': Color,'color': FontColor}">
         <h1>{{BoxName}}</h1>
     </div>
 </template>
 <script>
 export default {
-  props: ['BoxName', 'Color'],
+  props: ['BoxName', 'Color', 'FontColor'],
   data () {
     return {}
   }
@@ -14,9 +14,9 @@ export default {
 <style scoped>
 .box{
     width: 100%;
-    height: 280px;
+    height: 80px;
     text-align: center;
-    line-height: 280px;
+    line-height: 80px;
     border-radius: 10%;
 }
 </style>

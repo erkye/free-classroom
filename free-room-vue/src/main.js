@@ -5,6 +5,7 @@ import App from './App.vue'
 import router from './router'
 import axios from 'axios'
 import './style/gobal.css'
+import Animate from 'animate.css'
 
 Vue.config.productionTip = false
 Vue.prototype.$message = Message
@@ -25,6 +26,8 @@ axios.interceptors.response.use(response => {
 Vue.prototype.$http = axios
 
 Vue.use(ElementUI)
+
+Vue.use(Animate)
 
 new Vue({
   router,

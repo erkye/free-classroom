@@ -1,6 +1,6 @@
 <template>
-    <div class="box" :style="{'background-color': colors[(Color-1) %(colors.length)]}">
-        <h3>{{BoxName}}</h3>
+    <div class="box" :style="{'background-color': colors[(Color-1) %(colors.length)],'color': fontColors[(Color-1) %(fontColors.length)]}">
+        <h2>{{BoxName}}</h2>
     </div>
 </template>
 <script>
@@ -8,7 +8,8 @@ export default {
   props: ['BoxName', 'Color'],
   data () {
     return {
-      colors: ['#f6e58d', '#ffbe76', '#ff7979', '#ff9a76', '#badc58', '#7ed6df', '#e056fd', '#ffa372']
+      colors: ['#80a8c5', '#edded8', '#9ec183', '#715692', '#c2cec0', '#f7b38e', '#98dd9a'],
+      fontColors: ['#efdbd6', '#7d719c', '#715692', '#c4dcc8', '#7864b7', '#6966b3', '#725197']
     }
   }
 }
@@ -16,9 +17,9 @@ export default {
 <style scoped>
 .box{
     width: 100%;
-    height: 180px;
+    height: 80px;
     text-align: center;
-    line-height: 180px;
-    border-radius: 50%;
+    line-height: 80px;
+    border-radius: 10%;
 }
 </style>

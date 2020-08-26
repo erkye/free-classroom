@@ -1,9 +1,9 @@
 <template>
   <div id="app">
     <!-- 注释掉的为动画效果，效果不佳 -->
-    <!-- <transition :name="transitionName"> -->
+    <transition enter-active-class="animate__animated animate__flipInY">
       <router-view/>
-    <!-- </transition> -->
+    </transition>
   </div>
 </template>
 <script>
@@ -33,8 +33,12 @@ export default {
 #app{
   height: 100%;
   min-height: 100vh;
-  background-color: #f6f5f5;
+  background-color: #cadcf9;
+  /* background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%); */
  /*  transition-duration: 2s; */
+}
+.animate__animated{
+  --animate-duration: .8s;
 }
 
 </style>

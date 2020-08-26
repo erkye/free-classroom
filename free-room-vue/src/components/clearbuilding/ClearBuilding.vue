@@ -2,7 +2,7 @@
     <div>
         <el-row>
           <!-- 遍历教学楼 添加点击事件 子组件出发要使用 native 修饰 -->
-           <el-col :xs="12" :sm="12" :md="4" :lg="4" :xl="4" v-for="building in buildings" :key="building.id">
+           <el-col :xs="24" :sm="24" :md="4" :lg="4" :xl="4" v-for="building in buildings" :key="building.id">
                <Building :BoxName='building.name' :Color=building.id @click.native="clickSelection(building.id,building.name)"/>
             </el-col>
         </el-row>

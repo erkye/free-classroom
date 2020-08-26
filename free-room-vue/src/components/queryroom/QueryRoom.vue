@@ -2,7 +2,7 @@
     <div>
       <!-- 遍历显示可查询教学楼 -->
         <el-row>
-           <el-col :xs="12" :sm="12" :md="4" :lg="4" :xl="4" v-for="building in buildings" :key="building.id">
+           <el-col :xs="24" :sm="24" :md="4" :lg="4" :xl="4" v-for="building in buildings" :key="building.id">
                <Building :BoxName='building.name' :Color=building.id @click.native="clickSelection(building.id,building.name)"/>
             </el-col>
         </el-row>
