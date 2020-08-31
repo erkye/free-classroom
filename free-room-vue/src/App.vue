@@ -12,6 +12,20 @@ export default {
     return {
       /* transitionName: 'fold-left' */
     }
+  },
+  methods: {
+    // 打印信息
+    printAppInfo () {
+      console.log('--------------------------APP信息------------------------')
+      console.log('|        该项目为开源项目，欢迎感兴趣的小伙伴参与           |')
+      console.log('|   Gitee地址：https://gitee.com/lifazhan/free-classroom |')
+      console.log('|              作者邮箱: lifazhan233@gmail.com           |')
+      console.log('|                   任何问题请及时反馈                    |')
+      console.log('---------------------------------------------------------')
+    }
+  },
+  mounted () {
+    this.printAppInfo()
   }
 /*   beforeRouteUpdate (to, from, next) {
     const toDepth = to.path.split('/').length

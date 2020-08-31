@@ -22,6 +22,10 @@ public class BuildingController {
     @Autowired
     private BuildingService buildingService;
 
+    /**
+     * 显示所有的教学楼信息
+     * @return
+     */
     @GetMapping("/all")
     public List<Building> findAll(){
         return buildingService.findAll();

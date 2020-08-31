@@ -109,6 +109,40 @@ public class FreeRoomServiceImpl implements FreeRoomService {
         return resultList;
     }
 
+    @Override
+    public List<BuildRoom> findLuckyRoom(Integer buildId, String buildName) {
+
+        List<BuildRoom> result = new ArrayList<>();
+
+        // 查询该教学楼的所有教室
+        BuildRoomExample buildRoomExample = new BuildRoomExample();
+        BuildRoomExample.Criteria criteria = buildRoomExample.createCriteria();
+        criteria.andBuildEqualTo(buildId);
+        List<BuildRoom> roomList = buildRoomMapper.selectByExample(buildRoomExample);
+
+
+        // 查询所有教室的每节课的状态
+        for (BuildRoom room : roomList) {
+            // 标记该教室是否是当前全部空闲
+            boolean flag = true;
+            // 获取该教室当天的每节课的信息
+            List<RoomSessionStatusResult> roomStatus = findRoomStatusByBuildAndRoom(buildName, room.getName());
+            for (RoomSessionStatusResult status : roomStatus) {
+                // 如果当天的课表信息中有不可用的 将标记改为false
+                if(!status.isFree()){
+                    flag = false;
+                }
+            }
+            // 如果该教室全天都是空闲的 添加该教室
+            if(flag){
+                result.add(room);
+            }
+        }
+
+        return result;
+
+    }
+
     private Map<Integer,ClearBuildingRoomResult> getClearBuildingList(List<BuildRoom> roomList){
         Map<Integer,ClearBuildingRoomResult> map = new HashMap<>();
         // 上课时间提示

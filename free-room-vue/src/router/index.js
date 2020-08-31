@@ -63,6 +63,24 @@ const routes = [
     meta: {
       title: '💐教室结果'
     }
+  },
+  /* LuckRoom--用户选择查询的教学楼 */
+  {
+    path: '/LuckyRoom',
+    name: 'LuckyRoom',
+    component: () => import('../components/lunckyroom/LuckyRoomBuilding.vue'),
+    meta: {
+      title: '🌹LuckyRoom-选择教学楼'
+    }
+  },
+  /* LuckyRoom生活 */
+  {
+    path: '/LuckyRoomList/:id/:name',
+    name: 'LuckyRoomList',
+    component: () => import('../components/lunckyroom/LuckyRoomList.vue'),
+    meta: {
+      title: '🌜LuckyRoom'
+    }
   }
 ]
 

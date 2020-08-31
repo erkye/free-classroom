@@ -44,7 +44,7 @@ export default {
     /* 获取扫楼的结果 */
     async getClearRoomList () {
       const result = await this.$http.get('/freeRoom/clearBuilding?buildingId=' + this.buildingId + '&buildingName=' + this.buildingName)
-      console.log(result)
+      // console.log(result)
       if (result.code === 1000) {
         this.freeRoomList = result.data
       } else {

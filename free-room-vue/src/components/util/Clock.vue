@@ -104,7 +104,7 @@ export default {
     }
     .clock .flip {
         position: relative;
-        width: 80px;
+        width: 25vw;
         height: 100px;
         margin: 2px;
         font-size: 66px;

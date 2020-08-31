@@ -22,6 +22,11 @@ public class RoomController {
     @Autowired
     private RoomService roomService;
 
+    /**
+     * 查询是教学楼的所有教室
+     * @param id
+     * @return
+     */
     @GetMapping("/findRooms")
     public List<BuildRoom> findRoomByBuildId(int id){
         return roomService.findByBuildId(id);

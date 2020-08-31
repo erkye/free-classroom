@@ -1,5 +1,6 @@
 package com.freeroom.service;
 
+import com.freeroom.domain.BuildRoom;
 import com.freeroom.domain.ClearBuildingRoomResult;
 import com.freeroom.domain.RoomSessionStatusResult;
 
@@ -27,4 +28,12 @@ public interface FreeRoomService {
      * @return
      */
     List<ClearBuildingRoomResult> findByBuildingName(Integer buildId, String buildName);
+
+    /**
+     * 查询教学楼的luckyRoom
+     * @param buildId
+     * @param buildName
+     * @return
+     */
+    List<BuildRoom>  findLuckyRoom(Integer buildId, String buildName);
 }
